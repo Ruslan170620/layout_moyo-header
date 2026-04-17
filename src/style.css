@@ -1,4 +1,4 @@
-* {
+html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -23,8 +23,6 @@ a {
 /* 1. Виправлено висоту, падінги та розподіл елементів */
 .header {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   box-sizing: border-box;
   display: flex;
   align-items: center;
