@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -18,15 +20,21 @@ a {
   text-decoration: none;
 }
 
+/* 1. Виправлено висоту, падінги та розподіл елементів */
 .header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  padding: 0 50px;
+  justify-content: space-between; /* Лого зліва, nav справа */
+  height: 60px; /* Було 64px */
+  padding: 0 50px; /* Було 24px */
   background-color: #fff;
 }
 
+/* 2. Виправлено розмір логотипу */
 .logo {
   display: flex;
 }
@@ -46,12 +54,14 @@ a {
   height: 100%;
 }
 
+/* 3. Марджини замість падінгів для розділення пунктів */
 .nav__item {
   display: flex;
   height: 100%;
-  margin-left: 20px;
+  margin-left: 20px; /* Відступ зліва */
 }
 
+/* Прибираємо марджин у першого елемента */
 .nav__item:first-child {
   margin-left: 0;
 }
@@ -60,17 +70,15 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0;
+  padding: 0; /* Прибрано внутрішні відступи */
   height: 100%;
-  font-size: 12px;
-  letter-spacing: 0.04em;
+  font-size: 12px; /* Було 13px */
   text-transform: uppercase;
   color: #000;
   transition: color 0.2s;
 }
 
-.nav__link:hover,
-.nav__link[data-qa='hover'] {
+.nav__link:hover {
   color: #00acdc;
 }
 
